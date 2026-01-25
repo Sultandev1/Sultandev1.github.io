@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sultan Alshahrani | Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23BC13FE' rx='16'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold' font-size='32'>SA</text></svg>">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -337,6 +339,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             let currentLang = 'en';
 
+            // Content Object
             const content = {
                 en: {
                     heroSubtitle: "Innovator • Student • Tech Enthusiast",
@@ -378,6 +381,7 @@
                 }
             };
 
+            // Theme Toggle Logic
             const themeBtn = document.getElementById('themeBtn');
             const themeIcon = document.getElementById('themeIcon');
             const html = document.documentElement;
@@ -394,6 +398,7 @@
                 }
             });
 
+            // Language Toggle Logic
             const langBtn = document.getElementById('langBtn');
 
             langBtn.addEventListener('click', () => {
