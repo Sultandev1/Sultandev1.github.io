@@ -1,6 +1,7 @@
 # Hi there, I'm Sultan Alshahrani 👋
 
 [![Portfolio](https://img.shields.io/badge/View_Portfolio-BC13FE?style=for-the-badge&logo=github&logoColor=white)](https://Sultandev1.github.io/) 
+
 I am a passionate Tech Enthusiast and Student at **Al Mawhbeen High Technical School** in Jeddah. I bridge the gap between rigorous scientific inquiry (Physics, Bio, Chem) and cutting-edge technology (AI, LLMs).
 
 ---
