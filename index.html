@@ -3,476 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sultan Alshahrani | Portfolio</title>
+    <title>Sultan Alshahrani | AI & Data Science Portfolio</title>
+    <meta name="description" content="Portfolio of Sultan Alshahrani - AI & Data Science student at Al Mawhbeen High Technical School. Specializing in LLMs, Python, and Machine Learning.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sultandev1.github.io/">
-    <meta property="og:title" content="Sultan Alshahrani | AI, Data Science & Tech Portfolio">
-    <meta property="og:description" content="Explore the portfolio of Sultan Alshahrani, a student at Al Mawhbeen High Technical School. Discover projects in AI, LLMs, and Data Science.">
+    <meta property="og:title" content="Sultan Alshahrani | AI & Data Science Portfolio">
+    <meta property="og:description" content="Explore projects in AI, LLMs, and Data Science. Tuwaiq Schools student passionate about building intelligent systems.">
     <meta property="og:image" content="https://sultandev1.github.io/preview.png">
-
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sultandev1.github.io/">
-    <meta property="twitter:title" content="Sultan Alshahrani | AI, Data Science & Tech Portfolio">
-    <meta property="twitter:description" content="Explore the portfolio of Sultan Alshahrani, a student at Al Mawhbeen High Technical School. Discover projects in AI, LLMs, and Data Science.">
-    <meta property="twitter:image" content="https://sultandev1.github.io/preview.png">
-
-    <meta name="theme-color" content="#BC13FE">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23BC13FE' rx='16'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold' font-size='32'>SA</text></svg>">
+    <meta name="theme-color" content="#6366f1">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%236366f1' rx='16'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold' font-size='32'>S</text></svg>">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        neonPurple: '#BC13FE',
-                        electricBlue: '#00E5FF',
-                        darkBg: '#050505',
-                        lightBg: '#F8FAFC',
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#ec4899',
+                        dark: '#0f172a',
+                        darker: '#020617',
                     },
                     fontFamily: {
-                        display: ['Outfit', 'sans-serif'],
-                        body: ['Inter', 'sans-serif'],
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    
     <style>
-        /* Glass Effect */
         .glass {
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
-
-        /* Light Mode Glass Override */
         html:not(.dark) .glass {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.7);
             border: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
         }
-        
         .text-gradient {
-            background: linear-gradient(to right, #BC13FE, #00E5FF);
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .bg-gradient-mesh {
-            background-color: #050505;
-            background-image: 
-                radial-gradient(at 0% 0%, hsla(285,100%,20%,0.15) 0, transparent 50%), 
-                radial-gradient(at 100% 100%, hsla(185,100%,20%,0.15) 0, transparent 50%);
+        .bg-gradient-animated {
+            background: linear-gradient(-45deg, #6366f1, #8b5cf6, #ec4899, #6366f1);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
         }
-
-        html:not(.dark) .bg-gradient-mesh {
-            background-color: #F8FAFC;
-            background-image: 
-                radial-gradient(at 0% 0%, hsla(285,100%,60%,0.1) 0, transparent 50%), 
-                radial-gradient(at 100% 100%, hsla(185,100%,60%,0.1) 0, transparent 50%);
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
-
-        .timeline-line {
-            background: linear-gradient(to bottom, #BC13FE, #00E5FF);
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
         }
-
-        /* Smooth Transitions */
-        body, .glass, p, h1, h2, h3, h4, span, div, a {
-            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
-
-        [dir="rtl"] { font-family: 'Inter', 'Outfit', sans-serif; }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+        }
     </style>
 </head>
-<body class="bg-lightBg dark:bg-darkBg text-slate-900 dark:text-white font-body selection:bg-neonPurple/30">
+<body class="bg-slate-50 dark:bg-darker text-slate-900 dark:text-white font-sans antialiased overflow-x-hidden">
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto glass rounded-full px-6 py-3 flex items-center justify-between">
-            <a href="#home" class="text-2xl font-display font-extrabold tracking-tighter text-gradient cursor-pointer hover:scale-105 transition-transform">S.A.</a>
-            
-            <div class="hidden md:flex gap-8 font-medium text-sm tracking-wide text-slate-600 dark:text-slate-300">
-                <a href="#about" class="hover:text-electricBlue transition-colors">About</a>
-                <a href="#achievements" class="hover:text-electricBlue transition-colors">Achievements</a>
-                <a href="#journey" class="hover:text-electricBlue transition-colors">Journey</a>
-                <a href="#contact" class="hover:text-electricBlue transition-colors">Contact</a>
-            </div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="glass rounded-2xl px-6 py-3 flex items-center justify-between">
+                <a href="#home" class="font-display font-bold text-2xl text-gradient">S.A.</a>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="#skills" class="text-sm font-medium hover:text-primary transition-colors">Skills</a>
+                    <a href="#projects" class="text-sm font-medium hover:text-primary transition-colors">Projects</a>
+                    <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                </div>
 
-            <div class="flex items-center gap-4">
-                <button id="themeBtn" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors text-slate-900 dark:text-white" title="Toggle Theme">
-                    <svg id="themeIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                </button>
-                <button id="langBtn" class="px-3 py-1 glass rounded-lg text-xs font-bold hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer">AR</button>
+                <div class="flex items-center gap-3">
+                    <button id="themeToggle" class="p-2 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+                        <span class="dark:hidden">🌙</span>
+                        <span class="hidden dark:inline">☀️</span>
+                    </button>
+                    <a href="#contact" class="hidden sm:block px-5 py-2 bg-gradient-animated text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-opacity">
+                        Let's Talk
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 px-6 bg-gradient-mesh overflow-hidden">
-        <div class="absolute w-[500px] h-[500px] bg-neonPurple/10 blur-[120px] rounded-full -top-20 -left-20 animate-pulse-slow"></div>
-        <div class="absolute w-[400px] h-[400px] bg-electricBlue/10 blur-[100px] rounded-full -bottom-20 -right-20 animate-pulse-slow"></div>
-        
-        <div class="max-w-4xl text-center z-10">
-            <h2 class="text-electricBlue font-display font-semibold tracking-widest uppercase text-sm mb-4" id="heroSubtitle">Innovator • Student • Tech Enthusiast</h2>
-            <h1 class="text-6xl md:text-8xl font-display font-extrabold mb-8 leading-tight tracking-tight text-slate-900 dark:text-white" id="heroTitle">
-                Sultan <span class="text-gradient">Alshahrani</span>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+            <div class="reveal">
+                <span class="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                    👋 Welcome to my portfolio
+                </span>
+            </div>
+            
+            <h1 class="reveal font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight" style="transition-delay: 0.1s">
+                Hi, I'm <span class="text-gradient">Sultan</span>
             </h1>
-            <p class="text-xl md:text-2xl text-slate-600 dark:text-gray-400 font-light max-w-2xl mx-auto leading-relaxed mb-10" id="heroDesc">
-                Shaping the future of AI and Data Science from Jeddah to the World. Passionate about Large Language Models and scientific innovation.
+            
+            <div class="reveal text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8" style="transition-delay: 0.2s">
+                <span id="typed-text"></span><span class="animate-pulse">|</span>
+            </div>
+            
+            <p class="reveal text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed" style="transition-delay: 0.3s">
+                A passionate AI & Data Science student at <strong class="text-slate-900 dark:text-white">Tuwaiq Schools (Al Mawhbeen)</strong>. 
+                I build intelligent systems and explore the frontiers of machine learning.
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#about" class="px-8 py-4 bg-gradient-to-r from-neonPurple to-electricBlue rounded-xl font-bold text-black hover:scale-105 transition-transform shadow-lg shadow-neonPurple/20">Explore My Work</a>
-                <a href="#contact" class="px-8 py-4 glass rounded-xl font-bold hover:bg-black/5 dark:hover:bg-white/10 transition-colors">Get In Touch</a>
+            
+            <div class="reveal flex flex-col sm:flex-row gap-4 justify-center" style="transition-delay: 0.4s">
+                <a href="#projects" class="px-8 py-4 bg-gradient-animated text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-primary/25 transition-all">
+                    🚀 View Projects
+                </a>
+                <a href="https://github.com/Sultandev1" target="_blank" class="px-8 py-4 glass font-semibold rounded-2xl hover:bg-slate-200 dark:hover:bg-white/10 transition-all">
+                    🐙 GitHub
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="glass p-10 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-neonPurple/20 blur-3xl group-hover:bg-neonPurple/40 transition-colors"></div>
-                    <h3 class="text-3xl font-display font-bold mb-6 flex items-center gap-3">
-                        <span class="w-10 h-1 bg-neonPurple"></span>
-                        <span id="aboutHeading" class="text-slate-900 dark:text-white">My Journey</span>
-                    </h3>
-                    <p class="text-slate-600 dark:text-gray-300 leading-relaxed mb-6 text-lg" id="aboutText1">
-                        Currently a student at Al Mawhbeen High Technical School, I dive deep into the world of technology. My approach is multidisciplinary, bridging the gap between rigorous scientific inquiry and cutting-edge artificial intelligence.
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-wider">About Me</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mt-3 mb-6">
+                        Bridging Science & <span class="text-gradient">Technology</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6">
+                        As a student at Al Mawhbeen High Technical School, I combine rigorous scientific inquiry with cutting-edge AI development. My journey spans from physics and biology to training large language models.
                     </p>
-                    <p class="text-slate-600 dark:text-gray-300 leading-relaxed text-lg" id="aboutText2">
-                        Beyond the code, I am deeply rooted in Saudi culture, finding inspiration in the precision and heritage of competitive camel festivals while exploring the complexities of physics, biology, and chemistry.
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8">
+                        When I'm not coding, you'll find me at camel festivals, exploring the intersection of heritage and innovation.
                     </p>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="glass p-6 rounded-2xl border-l-4 border-electricBlue">
-                        <div class="text-electricBlue font-display font-bold text-2xl mb-1">AI & LLMs</div>
-                        <p class="text-xs text-slate-500 dark:text-gray-400 uppercase tracking-wider" id="skill1">Core Interest</p>
-                    </div>
-                    <div class="glass p-6 rounded-2xl border-l-4 border-neonPurple">
-                        <div class="text-neonPurple font-display font-bold text-2xl mb-1">Python</div>
-                        <p class="text-xs text-slate-500 dark:text-gray-400 uppercase tracking-wider" id="skill2">Data Analysis</p>
-                    </div>
-                    <div class="glass p-6 rounded-2xl border-l-4 border-slate-900 dark:border-white">
-                        <div class="text-slate-900 dark:text-white font-display font-bold text-2xl mb-1">Science</div>
-                        <p class="text-xs text-slate-500 dark:text-gray-400 uppercase tracking-wider" id="skill3">Physics & Bio</p>
-                    </div>
-                    <div class="glass p-6 rounded-2xl border-l-4 border-electricBlue">
-                        <div class="text-electricBlue font-display font-bold text-2xl mb-1">Heritage</div>
-                        <p class="text-xs text-slate-500 dark:text-gray-400 uppercase tracking-wider" id="skill4">Culture</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements" class="py-32 px-6 bg-slate-100/50 dark:bg-white/5">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl font-display font-extrabold mb-16 text-center text-slate-900 dark:text-white" id="achievementsHeading">Milestones & <span class="text-gradient">Recognition</span></h2>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-neonPurple/20 flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6 text-neonPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="glass rounded-2xl p-6 text-center">
+                            <div class="text-3xl font-display font-bold text-primary mb-1">1573</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Mawhiba Score</div>
                         </div>
-                        <h4 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Al Mawhbeen Entrance</h4>
-                        <p class="text-slate-500 dark:text-gray-400 text-sm mb-4">Mawhiba Excellence Program</p>
-                    </div>
-                    <div>
-                        <div class="text-3xl font-display font-extrabold text-electricBlue">Score: 1573</div>
-                        <div class="text-xs text-slate-400 dark:text-gray-500 mt-2">Level 3 • 2025</div>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-electricBlue/20 flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6 text-electricBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Fundamentals of AI</h4>
-                        <p class="text-slate-500 dark:text-gray-400 text-sm mb-4">SDAIA Certification</p>
-                    </div>
-                    <div>
-                        <div class="text-lg font-display font-semibold text-slate-900 dark:text-white">Certified Professional</div>
-                        <div class="text-xs text-slate-400 dark:text-gray-500 mt-2">February 8, 2025</div>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-slate-900/10 dark:bg-white/10 flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-slate-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Satr Platform Specializations</h4>
-                    <ul class="space-y-2 text-sm text-slate-600 dark:text-gray-400">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-neonPurple"></span> Python 101</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-neonPurple"></span> NumPy & Pandas</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-neonPurple"></span> Data Viz (Matplotlib)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-neonPurple"></span> Exploratory Data Analysis</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-6 auto-rows-[250px]">
-                <div class="md:col-span-2 glass p-10 rounded-3xl flex flex-col justify-end relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-neonPurple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <h4 class="text-sm font-bold text-neonPurple uppercase tracking-[0.3em] mb-4" id="expLabel">Current Status</h4>
-                    <h3 class="text-4xl font-display font-extrabold mb-4 text-slate-900 dark:text-white" id="expTitle">Student at Al Mawhbeen High Technical School</h3>
-                    <p class="text-slate-600 dark:text-gray-400 max-w-lg" id="expDesc">Nurturing a talent for technical excellence in Jeddah, specializing in the intersection of traditional sciences and future technology.</p>
-                </div>
-
-                <div class="glass p-10 rounded-3xl flex flex-col justify-center items-center text-center group">
-                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🧬</div>
-                    <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white">Science Enthusiast</h3>
-                    <p class="text-sm text-slate-500 dark:text-gray-400">Physics, Biology, Chemistry</p>
-                </div>
-
-                <div class="glass p-10 rounded-3xl flex flex-col justify-center items-center text-center group">
-                    <div class="text-5xl mb-4 group-hover:rotate-12 transition-transform">🐪</div>
-                    <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white">Cultural Heritage</h3>
-                    <p class="text-sm text-slate-500 dark:text-gray-400">King Abdulaziz Camel Festival</p>
-                </div>
-
-                <div class="md:col-span-2 glass p-10 rounded-3xl flex items-center gap-10 overflow-hidden group">
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-display font-bold mb-4 text-slate-900 dark:text-white">Tech & AI Stack</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-slate-200 dark:bg-white/5 rounded-full text-xs font-bold border border-slate-300 dark:border-white/10 text-slate-700 dark:text-white">Python</span>
-                            <span class="px-4 py-2 bg-slate-200 dark:bg-white/5 rounded-full text-xs font-bold border border-slate-300 dark:border-white/10 text-slate-700 dark:text-white">Pandas</span>
-                            <span class="px-4 py-2 bg-slate-200 dark:bg-white/5 rounded-full text-xs font-bold border border-slate-300 dark:border-white/10 text-slate-700 dark:text-white">LLMs</span>
-                            <span class="px-4 py-2 bg-slate-200 dark:bg-white/5 rounded-full text-xs font-bold border border-slate-300 dark:border-white/10 text-slate-700 dark:text-white">Sentiment Analysis</span>
-                            <span class="px-4 py-2 bg-slate-200 dark:bg-white/5 rounded-full text-xs font-bold border border-slate-300 dark:border-white/10 text-slate-700 dark:text-white">Data Science</span>
+                        <div class="glass rounded-2xl p-6 text-center">
+                            <div class="text-3xl font-display font-bold text-secondary mb-1">SDAIA</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">AI Certified</div>
                         </div>
                     </div>
-                    <div class="hidden lg:block w-48 h-48 bg-electricBlue/10 rounded-full blur-2xl group-hover:bg-electricBlue/30 transition-colors"></div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="journey" class="py-32 px-6 relative overflow-hidden">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-5xl font-display font-extrabold mb-20 text-center text-slate-900 dark:text-white" id="journeyHeading">Personal <span class="text-gradient">Timeline</span></h2>
-            
-            <div class="relative">
-                <div class="absolute left-1/2 -translate-x-1/2 w-1 h-full timeline-line rounded-full opacity-30"></div>
                 
-                <div class="space-y-24">
-                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
-                        <div class="md:w-[45%] text-right hidden md:block">
-                            <span class="text-neonPurple font-display font-bold text-xl">Late 2025</span>
-                        </div>
-                        <div class="w-12 h-12 glass rounded-full flex items-center justify-center z-10 border-2 border-neonPurple group-hover:scale-125 transition-transform bg-white dark:bg-transparent">
-                            <div class="w-4 h-4 bg-neonPurple rounded-full animate-pulse"></div>
-                        </div>
-                        <div class="md:w-[45%] mt-6 md:mt-0 glass p-8 rounded-2xl group-hover:border-neonPurple/50 transition-colors">
-                            <span class="md:hidden text-neonPurple font-bold block mb-2">Late 2025</span>
-                            <h4 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Weigh It (أوزنها) AI</h4>
-                            <p class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed">Conceptualized and developed an AI model for predicting student grades, including full branding and logo design.</p>
-                        </div>
-                    </div>
-
-                    <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group">
-                        <div class="md:w-[45%] text-left hidden md:block">
-                            <span class="text-electricBlue font-display font-bold text-xl">Late 2025</span>
-                        </div>
-                        <div class="w-12 h-12 glass rounded-full flex items-center justify-center z-10 border-2 border-electricBlue group-hover:scale-125 transition-transform bg-white dark:bg-transparent">
-                            <div class="w-4 h-4 bg-electricBlue rounded-full animate-pulse"></div>
-                        </div>
-                        <div class="md:w-[45%] mt-6 md:mt-0 glass p-8 rounded-2xl text-right group-hover:border-electricBlue/50 transition-colors">
-                            <span class="md:hidden text-electricBlue font-bold block mb-2">Late 2025</span>
-                            <h4 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Satr Web Platform</h4>
-                            <p class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed">Contributed to the web development and content architecture for the Satr Educational platform.</p>
-                        </div>
-                    </div>
-
-                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
-                        <div class="md:w-[45%] text-right hidden md:block">
-                            <span class="text-gradient font-display font-bold text-xl">January 2026</span>
-                        </div>
-                        <div class="w-12 h-12 glass rounded-full flex items-center justify-center z-10 border-2 border-slate-900 dark:border-white group-hover:scale-125 transition-transform bg-white dark:bg-transparent">
-                            <div class="w-4 h-4 bg-slate-900 dark:bg-white rounded-full animate-pulse"></div>
-                        </div>
-                        <div class="md:w-[45%] mt-6 md:mt-0 glass p-8 rounded-2xl group-hover:border-slate-900/50 dark:group-hover:border-white/50 transition-colors">
-                            <span class="md:hidden text-slate-900 dark:text-white font-bold block mb-2">January 2026</span>
-                            <h4 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Advanced Data Engineering</h4>
-                            <p class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed">Mastering complex data manipulation using Python and Pandas for large-scale analytical projects.</p>
-                        </div>
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <div class="glass rounded-3xl p-8">
+                        <h3 class="font-display text-2xl font-bold mb-6">Quick Facts</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <span class="text-2xl">🎓</span>
+                                <span>Tuwaiq Schools - Al Mawhbeen</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-2xl">🤖</span>
+                                <span>AI & Data Science Focus</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-2xl">🧬</span>
+                                <span>Physics, Biology, Chemistry</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-2xl">📍</span>
+                                <span>Jeddah, Saudi Arabia</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-32 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-5xl font-display font-extrabold mb-16 text-center text-slate-900 dark:text-white" id="contactHeading">Let's <span class="text-gradient">Connect</span></h2>
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 px-6 bg-slate-100 dark:bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">My Arsenal</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-3">
+                    Skills & <span class="text-gradient">Technologies</span>
+                </h2>
+            </div>
             
-            <div class="grid md:grid-cols-2 gap-10 items-start">
-                
-                <div class="glass p-8 md:p-10 rounded-3xl order-2 md:order-1">
-                    <form action="https://formspree.io/f/mreqgqdw" method="POST" class="space-y-6">
-                        
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="reveal glass rounded-2xl p-8 card-hover" style="transition-delay: 0.1s">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="font-display text-xl font-bold mb-4">Languages</h3>
+                    <div class="space-y-3">
                         <div>
-                            <label for="name" class="block text-sm font-bold text-slate-700 dark:text-gray-300 mb-2">Name</label>
-                            <input type="text" name="name" required 
-                                class="w-full bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-neonPurple focus:ring-1 focus:ring-neonPurple transition-all"
-                                placeholder="Your Name">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Python</span>
+                                <span class="text-primary">90%</span>
+                            </div>
+                            <div class="h-2 bg-slate-200 dark:bg-white/10 rounded-full">
+                                <div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full" style="width: 90%"></div>
+                            </div>
                         </div>
-
                         <div>
-                            <label for="email" class="block text-sm font-bold text-slate-700 dark:text-gray-300 mb-2">Email</label>
-                            <input type="email" name="email" required 
-                                class="w-full bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-neonPurple focus:ring-1 focus:ring-neonPurple transition-all"
-                                placeholder="name@example.com">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>JavaScript</span>
+                                <span class="text-primary">75%</span>
+                            </div>
+                            <div class="h-2 bg-slate-200 dark:bg-white/10 rounded-full">
+                                <div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full" style="width: 75%"></div>
+                            </div>
                         </div>
-
                         <div>
-                            <label for="message" class="block text-sm font-bold text-slate-700 dark:text-gray-300 mb-2">Message</label>
-                            <textarea name="message" rows="4" required 
-                                class="w-full bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-neonPurple focus:ring-1 focus:ring-neonPurple transition-all resize-none"
-                                placeholder="How can we work together?"></textarea>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>HTML/CSS</span>
+                                <span class="text-primary">85%</span>
+                            </div>
+                            <div class="h-2 bg-slate-200 dark:bg-white/10 rounded-full">
+                                <div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full" style="width: 85%"></div>
+                            </div>
                         </div>
-
-                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-neonPurple to-electricBlue rounded-xl font-bold text-black hover:scale-[1.02] transition-transform shadow-lg shadow-neonPurple/20">
-                            Send Message
-                        </button>
-                    </form>
+                    </div>
                 </div>
+                
+                <div class="reveal glass rounded-2xl p-8 card-hover" style="transition-delay: 0.2s">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="font-display text-xl font-bold mb-4">Data Science</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 glass rounded-full text-sm">Pandas</span>
+                        <span class="px-3 py-1 glass rounded-full text-sm">NumPy</span>
+                        <span class="px-3 py-1 glass rounded-full text-sm">Matplotlib</span>
+                        <span class="px-3 py-1 glass rounded-full text-sm">Scikit-learn</span>
+                        <span class="px-3 py-1 glass rounded-full text-sm">Data Visualization</span>
+                    </div>
+                </div>
+                
+                <div class="reveal glass rounded-2xl p-8 card-hover" style="transition-delay: 0.3s">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h3 class="font-display text-xl font-bold mb-4">AI & ML</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 glass rounded-full text-sm">LLMs</span>
+                        <span class="px-3 py-1 glass rounded-full text-sm">Sentiment Analysis</span>
+                        <span class="px-3 py-1 glass rounded-full text-sm">Predictive Modeling</span>
+                        <span class="px-3 py-1 glass rounded-full text-sm">Neural Networks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="space-y-6 order-1 md:order-2">
-                    <div class="glass p-8 rounded-3xl text-left">
-                        <h3 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Get in touch</h3>
-                        <p class="text-slate-600 dark:text-gray-400 leading-relaxed mb-8">
-                            I'm currently available for freelance projects and open to full-time opportunities. If you have a project that needs some creative tech touch, let's chat.
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Portfolio</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-3">
+                    Featured <span class="text-gradient">Projects</span>
+                </h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="reveal glass rounded-3xl overflow-hidden card-hover" style="transition-delay: 0.1s">
+                    <div class="h-48 bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center">
+                        <span class="text-6xl">🎓</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display text-2xl font-bold mb-3">Weigh It (أوزنها)</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">
+                            AI-powered grade prediction system that analyzes student performance metrics to forecast final grades.
                         </p>
-                        
-                        <div class="space-y-4">
-                            <a href="mailto:sultan.a.m.a.alshah@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl hover:bg-white/50 dark:hover:bg-white/5 transition-colors group">
-                                <div class="w-12 h-12 glass rounded-full flex items-center justify-center group-hover:bg-neonPurple group-hover:text-black transition-colors text-slate-900 dark:text-white">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-slate-500 dark:text-gray-400 font-bold uppercase tracking-wider">Email</div>
-                                    <div class="text-slate-900 dark:text-white font-medium truncate w-48">sultan.a.m.a.alshah@gmail.com</div>
-                                </div>
-                            </a>
-
-                            <a href="tel:+966556333879" class="flex items-center gap-4 p-4 rounded-2xl hover:bg-white/50 dark:hover:bg-white/5 transition-colors group">
-                                <div class="w-12 h-12 glass rounded-full flex items-center justify-center group-hover:bg-electricBlue group-hover:text-black transition-colors text-slate-900 dark:text-white">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-slate-500 dark:text-gray-400 font-bold uppercase tracking-wider">Phone</div>
-                                    <div class="text-slate-900 dark:text-white font-medium">+966 55 633 3879</div>
-                                </div>
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/sultan-alshahrani-a021a1392/" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl hover:bg-white/50 dark:hover:bg-white/5 transition-colors group">
-                                <div class="w-12 h-12 glass rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors text-slate-900 dark:text-white">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-slate-500 dark:text-gray-400 font-bold uppercase tracking-wider">LinkedIn</div>
-                                    <div class="text-slate-900 dark:text-white font-medium">Connect Profile</div>
-                                </div>
-                            </a>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-xs glass rounded-full">Python</span>
+                            <span class="px-3 py-1 text-xs glass rounded-full">Machine Learning</span>
                         </div>
+                        <a href="#" class="text-primary font-medium hover:underline">View Project →</a>
                     </div>
                 </div>
-
+                
+                <div class="reveal glass rounded-3xl overflow-hidden card-hover" style="transition-delay: 0.2s">
+                    <div class="h-48 bg-gradient-to-br from-secondary/30 to-accent/30 flex items-center justify-center">
+                        <span class="text-6xl">📚</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display text-2xl font-bold mb-3">Satr Educational Platform</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">
+                            Contributed to the development and content architecture of an educational platform for learners.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-xs glass rounded-full">Web Development</span>
+                            <span class="px-3 py-1 text-xs glass rounded-full">UI/UX</span>
+                        </div>
+                        <a href="#" class="text-primary font-medium hover:underline">View Project →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6 bg-slate-100 dark:bg-dark">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
+                    Let's Work <span class="text-gradient">Together</span>
+                </h2>
+            </div>
+            
+            <div class="reveal glass rounded-3xl p-8 md:p-12" style="transition-delay: 0.1s">
+                <form action="https://formspree.io/f/mreqgqdw" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Message</label>
+                        <textarea name="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-gradient-animated text-white font-semibold rounded-xl hover:opacity-90 transition-opacity">
+                        Send Message ✉️
+                    </button>
+                </form>
+                
+                <div class="mt-10 pt-10 border-t border-slate-200 dark:border-white/10">
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="mailto:sultan.a.m.a.alshah@gmail.com" class="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+                            📧 Email
+                        </a>
+                        <a href="https://linkedin.com/in/sultan-alshahrani-a021a1392" target="_blank" class="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+                            💼 LinkedIn
+                        </a>
+                        <a href="https://github.com/Sultandev1" target="_blank" class="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+                            🐙 GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-slate-200 dark:border-white/10">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+                © 2026 Sultan Alshahrani. Built with 💜
+            </p>
+        </div>
+    </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            let currentLang = 'en';
-
-            // Content Object
-            const content = {
-                en: {
-                    heroSubtitle: "Innovator • Student • Tech Enthusiast",
-                    heroTitle: `Sultan <span class="text-gradient">Alshahrani</span>`,
-                    heroDesc: "Shaping the future of AI and Data Science from Jeddah to the World. Passionate about Large Language Models and scientific innovation.",
-                    aboutHeading: "My Journey",
-                    aboutText1: "Currently a student at Al Mawhbeen High Technical School, I dive deep into the world of technology. My approach is multidisciplinary, bridging the gap between rigorous scientific inquiry and cutting-edge artificial intelligence.",
-                    aboutText2: "Beyond the code, I am deeply rooted in Saudi culture, finding inspiration in the precision and heritage of competitive camel festivals while exploring the complexities of physics, biology, and chemistry.",
-                    skill1: "Core Interest",
-                    skill2: "Data Analysis",
-                    skill3: "Physics & Bio",
-                    skill4: "Culture",
-                    achievementsHeading: `Milestones & <span class="text-gradient">Recognition</span>`,
-                    expLabel: "Current Status",
-                    expTitle: "Student at Al Mawhbeen High Technical School",
-                    expDesc: "Nurturing a talent for technical excellence in Jeddah, specializing in the intersection of traditional sciences and future technology.",
-                    journeyHeading: `Personal <span class="text-gradient">Timeline</span>`,
-                    contactHeading: `Let's <span class="text-gradient">Connect</span>`,
-                    contactText: "I'm always open to discussing tech projects, AI research, or cultural exchange."
-                },
-                ar: {
-                    heroSubtitle: "مبتكر • طالب • شغوف بالتقنية",
-                    heroTitle: `سلطان <span class="text-gradient">الشهراني</span>`,
-                    heroDesc: "أصيغ مستقبل الذكاء الاصطناعي وعلم البيانات من جدة إلى العالم. شغوف بنماذج اللغة الكبيرة والابتكار العلمي.",
-                    aboutHeading: "رحلتي",
-                    aboutText1: "طالب حالياً في ثانوية الموهوبين التقنية، أتعمق في عالم التكنولوجيا. منهجي متعدد التخصصات، حيث أجمع بين البحث العلمي الدقيق والذكاء الاصطناعي المتطور.",
-                    aboutText2: "بعيداً عن الأكواد، أنا متجذر بعمق في الثقافة السعودية، وأستمد الإلهام من دقة وتراث مهرجانات الإبل التنافسية مع استكشاف تعقيدات الفيزياء والأحياء والكيمياء.",
-                    skill1: "الاهتمام الأساسي",
-                    skill2: "تحليل البيانات",
-                    skill3: "الفيزياء والأحياء",
-                    skill4: "الثقافة",
-                    achievementsHeading: `الإنجازات و <span class="text-gradient">التقدير</span>`,
-                    expLabel: "الوضع الحالي",
-                    expTitle: "طالب في ثانوية الموهوبين التقنية",
-                    expDesc: "تنمية المواهب للتميز التقني في جدة، مع التخصص في تقاطع العلوم التقليدية وتكنولوجيا المستقبل.",
-                    journeyHeading: `الخط <span class="text-gradient">الزمني</span> الشخصي`,
-                    contactHeading: `دعونا <span class="text-gradient">نتواصل</span>`,
-                    contactText: "أنا متاح دائماً لمناقشة المشاريع التقنية، أبحاث الذكاء الاصطناعي، أو التبادل الثقافي."
-                }
-            };
-
-            // Theme Toggle Logic
-            const themeBtn = document.getElementById('themeBtn');
-            const themeIcon = document.getElementById('themeIcon');
-            const html = document.documentElement;
-
-            themeBtn.addEventListener('click', () => {
-                if (html.classList.contains('dark')) {
-                    html.classList.remove('dark');
-                    // Sun Icon
-                    themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
-                } else {
-                    html.classList.add('dark');
-                    // Moon Icon
-                    themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+        
+        // Typing Animation
+        new Typed('#typed-text', {
+            strings: [
+                'AI & Data Science Student',
+                'Python Developer',
+                'Machine Learning Enthusiast',
+                'Problem Solver'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+        
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
                 }
             });
-
-            // Language Toggle Logic
-            const langBtn = document.getElementById('langBtn');
-
-            langBtn.addEventListener('click', () => {
-                currentLang = currentLang === 'en' ? 'ar' : 'en';
-                document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-                langBtn.innerText = currentLang === 'en' ? 'AR' : 'EN';
-                
-                Object.keys(content[currentLang]).forEach(id => {
-                    const element = document.getElementById(id);
-                    if (element) {
-                        element.innerHTML = content[currentLang][id];
-                    }
-                });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
     </script>
