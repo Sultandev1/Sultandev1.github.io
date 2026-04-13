@@ -484,7 +484,7 @@
                 </h2>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- SDAIA Certificate -->
                 <div class="reveal glass rounded-2xl p-6 card-hover" style="transition-delay: 0.1s">
                     <div class="flex items-start justify-between mb-4">
@@ -530,6 +530,22 @@
                     <div class="flex items-center gap-2 text-accent text-sm">
                         <i data-lucide="book-open" class="w-4 h-4"></i>
                         <span>AI & Data Science</span>
+                    </div>
+                </div>
+
+                <!-- Defensethon -->
+                <div class="reveal glass rounded-2xl p-6 card-hover" style="transition-delay: 0.4s">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="p-3 rounded-xl bg-emerald-500/10">
+                            <i data-lucide="shield" class="w-8 h-8 text-emerald-500"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-xs font-medium rounded-full">2025</span>
+                    </div>
+                    <h3 class="font-display text-lg font-bold mb-2">Defensethon</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Participated in the Defensethon programming competition, tackling cybersecurity and programming challenges.</p>
+                    <div class="flex items-center gap-2 text-emerald-500 text-sm">
+                        <i data-lucide="code-2" class="w-4 h-4"></i>
+                        <span>Programming Track</span>
                     </div>
                 </div>
             </div>
@@ -681,8 +697,15 @@
     </button>
 
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+        // Initialize Lucide Icons (wait for library to load)
+        function initLucide() {
+            if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                lucide.createIcons();
+            } else {
+                setTimeout(initLucide, 100);
+            }
+        }
+        initLucide();
         
         // Hide Loader
         window.addEventListener('load', () => {
